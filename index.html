@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amjad P T | Digital Marketing Specialist Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts (Inter & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                            accent: '#06b6d4',
+                            emerald: '#10b981',
+                            purple: '#a855f7',
+                            violet: '#6366f1',
+                            pink: '#ec4899',
+                            amber: '#f59e0b'
+                        },
+                        darkbg: {
+                            900: '#070d1e',
+                            800: '#0f172a',
+                            700: '#1e293b',
+                            card: '#111c35'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070d1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+
+        /* Enhanced Ambient Glow & Radial Backgrounds */
+        .glow-bg {
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.12) 0%, transparent 45%);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(14, 165, 233, 0.15);
+        }
+
+        .glow-border {
+            position: relative;
+        }
+        
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(90deg, #0ea5e9, #a855f7, #10b981);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glow-border:hover::after {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-darkbg-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-800/80 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-purple to-brand-accent flex items-center justify-center font-display font-extrabold text-white text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        A
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-lg text-white leading-tight tracking-wide group-hover:text-brand-400 transition-colors">AMJAD P T</span>
+                        <span class="text-xs text-brand-400 font-medium tracking-wider">Digital Marketer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-300 hover:text-brand-400 transition-colors">ABOUT </a>
+                    <a href="#skills" class="text-slate-300 hover:text-brand-400 transition-colors">SKILLS AND TOOLS</a>
+                    
+                    <a href="#experience" class="text-slate-300 hover:text-brand-400 transition-colors">WORK EXPERIENCE</a>
+                    <a href="#seo-rankings" class="text-slate-300 hover:text-brand-400 transition-colors">SEO RANKINGS</a>
+                    <a href="#design-showcase" class="text-slate-300 hover:text-brand-400 transition-colors">DESIGNS </a>
+                    <a href="#education" class="text-slate-300 hover:text-brand-400 transition-colors">EDUCATIONAL QUALIFICATIONS</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 via-brand-purple to-brand-accent text-white font-bold shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all">Get in Touch</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg bg-slate-800/80">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-brand-400 font-medium py-1">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-brand-400 font-medium py-1">Skills & Tools</a>
+            <a href="#design-showcase" class="block text-slate-300 hover:text-brand-400 font-medium py-1">Design Showcase</a>
+            <a href="#experience" class="block text-slate-300 hover:text-brand-400 font-medium py-1">Experience</a>
+            <a href="#seo-rankings" class="block text-slate-300 hover:text-brand-400 font-medium py-1">SEO Rankings</a>
+            <a href="#education" class="block text-slate-300 hover:text-brand-400 font-medium py-1">Education</a>
+            <a href="#contact" class="block text-center w-full mt-2 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden glow-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left / Bio Intro -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-brand-500/30 text-brand-400 text-xs sm:text-sm font-semibold shadow-inner">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span class="text-emerald-400 font-bold">Available</span> for Full-time & Specialist Roles
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-white leading-tight">
+                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-purple to-emerald-400 animate-pulse">AMJAD P T</span>
+                    </h1>
+
+                   <p class="text-xl sm:text-2xl font-medium text-slate-300">
+                        Digital Marketing Specialist | SEO Analyst | Graphic Designer
+                    </p>
+
+                    <p class="text-slate-300 max-w-2xl text-base sm:text-lg leading-relaxed mx-auto lg:mx-0 font-normal">
+                        As an experienced Digital Marketing Specialist, I thrive in the fast-paced, ever-evolving digital landscape. Through continuous testing, data-driven strategy and hands-on practice, I have a proven track record of turning complex challenges into measurable growth. By blending technical SEO, strategic Social Media Marketing and eye-catching Graphic Design,I help brands elevate their online presence,engage target audiences and drive sustainable business success.
+                    </p>
+
+                    <!-- Contact Quick Chips -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2 text-xs sm:text-sm text-slate-300">
+                        <a href="tel:+918848219997" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700/80 hover:border-brand-500 hover:bg-slate-800 transition-all shadow-sm">
+                            <i class="fa-solid fa-phone text-brand-400"></i> +91 8848 21 9997
+                        </a>
+                        <a href="mailto:puthenkodeamjadpt@gmail.com" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700/80 hover:border-brand-500 hover:bg-slate-800 transition-all shadow-sm">
+                            <i class="fa-solid fa-envelope text-brand-purple"></i> puthenkodeamjadpt@gmail.com
+                        </a>
+                        <span class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700/80 shadow-sm">
+                            <i class="fa-solid fa-location-dot text-emerald-400"></i> Kochi , Kerala - India
+                        </span>
+                    </div>
+
+                    <!-- Call to Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#experience" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-bold text-center shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all">
+                            View Experience <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#seo-rankings" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card text-white font-bold text-center border-slate-700 hover:bg-slate-800 hover:border-brand-500/60 transition-all">
+                            Live Ranking Results
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="flex items-center justify-center lg:justify-start gap-4 pt-4">
+                        <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Connect:</span>
+                        <a href="https://www.linkedin.com/in/amjad-pmna-761a65250/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-10 h-10 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white hover:bg-blue-600 hover:border-blue-500 shadow-md transition-all hover:scale-110">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                       
+                        <a href="http://www.amjadpmna.online" target="_blank" rel="noopener noreferrer" aria-label="Personal Website" class="w-10 h-10 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white hover:bg-cyan-500 hover:border-cyan-400 shadow-md transition-all hover:scale-110">
+                            <i class="fa-solid fa-globe text-lg"></i>
+                        </a>
+                         <a href="https://www.instagram.com/amjad_pmna" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-10 h-10 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 shadow-md transition-all hover:scale-110">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right / Avatar & Stats Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Vibrant Glow Aura -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-500 via-brand-purple to-emerald-400 rounded-3xl blur-2xl opacity-50 animate-pulse"></div>
+                        
+                        <div class="relative rounded-3xl glass-card p-6 border border-slate-700/80 shadow-2xl space-y-6">
+                            <div class="flex justify-center">
+                                <a href="https://drive.google.com/file/d/1bSybv4nrs5JCbUs23ju2uRX-kkkkMAzo/view?usp=drive_link" download="Amjad-PT-CV.pdf" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white text-sm font-semibold shadow-md hover:shadow-brand-500/25 hover:opacity-95 transition-all">
+                                    <i class="fa-solid fa-download"></i>
+                                    Download CV
+                                </a>
+                            </div>
+
+                            <!-- Image Frame -->
+                            <div class="relative w-80 h-80 mx-auto rounded-2xl overflow-hidden border-2 border-brand-500/50 shadow-2xl ring-4 ring-brand-500/20">
+                                <img src="https://i.postimg.cc/qvTSCL6p/Wearing-Coat-Sitting.png" alt="Amjad P T" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1c2541/ffffff?text=Amjad+P+T';">
+                            </div>
+
+                            <!-- Highlights Grid -->
+                            <div class="grid grid-cols-2 gap-3 text-center">
+                                <div class="p-3.5 rounded-xl bg-slate-900/70 border border-brand-500/30 hover:border-brand-400 transition-colors">
+                                    <div class="text-2xl font-black text-brand-400 font-display">4.6 + Years </div>
+                                    <div class="text-xs text-slate-300 font-medium">Industry Experience</div>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-900/70 border border-emerald-500/30 hover:border-emerald-400 transition-colors">
+                                    <div class="text-2xl font-black text-emerald-400 font-display">1 - 10</div>
+                                    <div class="text-xs text-slate-300 font-medium">SERP Ranks</div>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-900/70 border border-purple-500/30 hover:border-purple-400 transition-colors">
+                                    <div class="text-2xl font-black text-purple-400 font-display">MSc</div>
+                                    <div class="text-xs text-slate-300 font-medium">Computer Science</div>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-900/70 border border-cyan-500/30 hover:border-cyan-400 transition-colors">
+                                    <div class="text-2xl font-black text-cyan-400 font-display">B2B/B2C</div>
+                                    <div class="text-xs text-slate-300 font-medium">Global Markets</div>
+                                </div>
+                            </div>
+
+                            <!-- Currently Working Banner -->
+                            <div class="p-3.5 rounded-xl bg-gradient-to-r from-brand-600/20 via-purple-600/20 to-brand-accent/20 border border-brand-500/30 text-xs text-slate-200 flex items-center justify-between shadow-inner">
+                                <span class="font-bold text-white">Current Company:</span>
+                                <span class="text-brand-400 font-extrabold">Automax Solutions (AUTOBSE)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-darkbg-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+                <h2 class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 inline-block px-4 py-1.5 rounded-full border border-brand-500/20">About Me</h2>
+                <p class="text-3xl sm:text-4xl font-black font-display text-white">Combining Technical Edge with Strategic Growth</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl space-y-4 border border-slate-800 hover:border-brand-500/60 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white font-display">SEO & Search Analytics</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                        Proven track record in executing end-to-end SEO strategies (On-page, Off-page and Technical SEO) to secure top-10 positions on search engines for competitive commercial keywords.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>On-Page SEO: Conducted comprehensive keyword research, search intent analysis, competitor analysis, keyword mapping and content optimization. Optimized title tags, meta descriptions, H1 – H6 headings, URL structures, internal linking, image ALT tags and landing page content to improve keyword relevance and organic rankings.</li>
+                            <li>Off-Page SEO: Executed strategic link-building campaigns through high-quality backlink acquisition, business directory submissions, guest posting, article submissions, social bookmarking and other relevant outreach activities to strengthen domain authority and improve website credibility.</li>
+                            <li>Technical SEO: Conducted technical SEO audits to identify and resolve website issues related to indexing, crawling, XML sitemaps, robots.txt, canonical tags, duplicate content, broken links, page speed, mobile responsiveness, Core Web Vitals and structured data implementation.</li>
+                            <li>Keyword Research & Competitor Analysis: Identified high-potential commercial and location-based keywords by evaluating search volume, keyword difficulty, search intent and competitor performance. Developed targeted SEO strategies to improve rankings for business-focused search queries.</li>
+                            <li>Content SEO: Planned and optimized SEO-friendly website landing pages, service pages, blogs and location-specific content using strategic keyword placement, semantic keywords and relevant internal linking to improve topical relevance and search visibility.</li>
+                        <li>Local SEO: Optimized location-based landing pages and Google Business Profile elements to improve local search visibility and reach potential customers across targeted geographical markets.</li>
+                            <li>SEO Performance Tracking & Reporting: Monitored website performance using Google Search Console, Google Analytics 4 and other SEO tools. Analyzed organic clicks, impressions, CTR, average keyword positions, traffic trends, backlink growth and user engagement to identify opportunities for continuous improvement.</li>
+                            <li>Ranking & Traffic Growth: Focused on achieving Top 10 search engine rankings for competitive commercial keywords while consistently improving organic traffic, keyword visibility, website authority and qualified organic audience acquisition.</li>
+                        </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl space-y-4 border border-slate-800 hover:border-emerald-500/60 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-emerald-500/30">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white font-display">Social Media Marketing & Lead Generation</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                        Ideologically opt in developing and executing result-oriented social media marketing strategies across Instagram, Facebook, LinkedIn, and YouTube to strengthen brand awareness, increase audience engagement, drive website traffic, and generate qualified business leads across domestic and Middle East markets.
+                    </p>
+                     <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Social Media Strategy & Planning: Developed platform-specific social media strategies aligned with business objectives, target audiences, brand positioning, and marketing goals. Planned monthly content calendars covering promotional campaigns, brand awareness activities, product highlights, industry updates, festive creatives, and business announcements.</li>
+                            <li>Content Creation & Management: Created engaging social media content, including promotional posters, carousel posts, reels, short-form videos, educational content, event creatives, and campaign materials. Developed platform-specific captions, headlines, descriptions, and relevant hashtags to improve content reach and audience interaction.</li>
+                            <li>Platform Management: Managed and optimized business profiles across Instagram, Facebook, LinkedIn, and YouTube. Maintained consistent brand communication, published regular content, monitored audience interactions, and improved platform visibility through strategic content distribution.</li>
+                            <li>Paid Social Media Campaigns: Planned, executed, and monitored targeted advertising campaigns using Meta Ads Manager (Facebook and Instagram) to reach relevant audience segments, promote business services, drive landing page visits, increase registrations, and generate potential customer enquiries.</li>
+                            <li>Audience Targeting & Lead Generation: Developed targeted campaigns based on geographical locations, demographics, interests, professional profiles, and business categories to reach potential customers, dealers, and business buyers across Indian and Middle East markets.</li>
+                        <li>LinkedIn Marketing & B2B Brand Building: Executed LinkedIn marketing activities to strengthen corporate branding, increase professional engagement, promote business updates, share industry-related content, and connect with potential business partners and institutional clients.</li>
+                            <li>YouTube Marketing & Video Optimization: Managed YouTube content publishing, optimized video titles, descriptions, tags, hashtags, and thumbnails, and developed promotional video strategies to improve video discoverability, views, audience retention, and channel growth.</li>
+                            <li>Campaign Performance Analysis: Monitored and analyzed social media performance using platform insights and advertising reports. Tracked reach, impressions, engagement rate, video views, link clicks, website traffic, audience growth, and lead generation to evaluate campaign effectiveness.</li>
+                        <li>Brand Awareness & Community Engagement: Implemented consistent brand communication strategies, promotional activities, interactive content, and audience engagement initiatives to strengthen brand recognition, build online credibility, and develop a relevant social media community.</li>
+                            <li>Optimization & Continuous Improvement: Evaluated campaign performance, audience behaviour, content effectiveness and advertising results to identify improvement opportunities, optimize targeting and creatives, manage campaign budgets, and improve marketing ROI.</li>
+                        </ul>
+
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl space-y-4 border border-slate-800 hover:border-purple-500/60 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-purple-500/30">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white font-display">Creative Design & AI Tools</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                        Creative Oriented in designing visually appealing, brand-focused, and marketing-oriented creatives using Canva, Adobe Illustrator, and modern AI-powered content generation tools. Skilled in transforming marketing objectives into effective visual communication materials that strengthen brand identity, attract target audiences, improve engagement, and support digital marketing campaigns.
+                    </p>
+                    <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Social Media Graphic Designing: Designed engaging promotional posters, social media creatives, carousel posts, banners, infographics, festive creatives, and advertisements for Instagram, Facebook, LinkedIn, and other digital platforms.</li>
+                            <li>Marketing & Advertising Creatives: Developed campaign-specific graphic materials for brand awareness, product promotions, lead generation, event announcements, business promotions, and paid advertising campaigns with clear messaging and compelling visual elements.</li>
+                            <li>Brand Identity & Visual Consistency: Maintained consistent brand identity across digital platforms by following brand guidelines, colour combinations, typography, logo placement, and visual communication standards.</li>
+                            <li>Promotional & Event Designs: Created professional event posters, auction promotional materials, vehicle listing creatives, campaign announcements, festival greeting designs, and registration-focused marketing materials to support business promotions and customer acquisition.</li>
+                            <li>Creative Design Using Canva: Utilized Canva to develop professional marketing graphics, presentations, social media templates, promotional videos, reels, brochures, and other digital communication materials.</li>
+                        <li>Adobe Illustrator: Used vector-based design techniques for logo-related graphics, illustrations, icons, typography, layout compositions, and scalable marketing design elements.</li>
+                            <li>AI-Powered Creative Workflows: Leveraged AI image generation and content creation tools to develop creative concepts, generate visual assets, explore design variations, create campaign backgrounds, and accelerate the creative production process.</li>
+                            <li>Video & Motion Content: Created and edited promotional videos, short-form reels, marketing videos, and visual presentations to support social media campaigns and improve audience engagement.</li>
+                        <li>Marketing-Focused Visual Communication: Translated campaign objectives, business requirements, and promotional messages into clear and attractive visual designs with strategic calls to action to encourage audience interaction, website visits, enquiries, and registrations.</li>
+                            <li>Creative Optimization & Adaptation: Adapted designs into different platform-specific dimensions and formats, ensuring visual quality, readability, responsiveness, and consistency across social media, digital advertisements, and other marketing channels.</li>
+                        <li> Creative Campaign Support: Collaborated with marketing activities to develop visual assets aligned with SEO campaigns, paid advertisements, social media promotions, brand awareness initiatives, and business development objectives.</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 inline-block px-4 py-1.5 rounded-full border border-brand-500/20">Core Expertise</h2>
+                    <p class="text-3xl sm:text-4xl font-black font-display text-white mt-2">Skills & Marketing Stack</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="skill-tabs">
+                    <button data-filter="all" class="skill-tab active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-brand-600 to-brand-purple text-white shadow-lg shadow-brand-500/25 transition-all">All Skills</button>
+                    <button data-filter="marketing" class="skill-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700">Digital Marketing</button>
+                    <button data-filter="tools" class="skill-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700">SEO & Analytics Tools</button>
+                    <button data-filter="design" class="skill-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition-all border border-slate-700">Design & Web Tech</button>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="skills-grid">
+                
+                <!-- Marketing Skills -->
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-brand-400">
+                    <i class="fa-solid fa-magnifying-glass-chart text-3xl text-brand-400"></i>
+                    <div class="text-sm font-bold text-white">On-Page SEO</div>
+                    <span class="text-[10px] text-brand-400 font-semibold bg-brand-500/10 px-2.5 py-0.5 rounded-full border border-brand-500/20">Marketing</span>
+                </div>
+
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-cyan-400">
+                    <i class="fa-solid fa-link text-3xl text-cyan-400"></i>
+                    <div class="text-sm font-bold text-white">Off-Page SEO</div>
+                    <span class="text-[10px] text-cyan-400 font-semibold bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">Marketing</span>
+                </div>
+
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-emerald-400">
+                    <i class="fa-solid fa-code text-3xl text-emerald-400"></i>
+                    <div class="text-sm font-bold text-white">Technical SEO</div>
+                    <span class="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">Marketing</span>
+                </div>
+
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-amber-400">
+                    <i class="fa-solid fa-rectangle-ad text-3xl text-amber-400"></i>
+                    <div class="text-sm font-bold text-white">Google Ads (SEM)</div>
+                    <span class="text-[10px] text-amber-400 font-semibold bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">Marketing</span>
+                </div>
+
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-blue-500">
+                    <i class="fa-brands fa-facebook text-3xl text-blue-500"></i>
+                    <div class="text-sm font-bold text-white">SMM & Lead Gen</div>
+                    <span class="text-[10px] text-blue-400 font-semibold bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">Marketing</span>
+                </div>
+
+                <div class="skill-card marketing glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-purple-400">
+                    <i class="fa-solid fa-paper-plane text-3xl text-purple-400"></i>
+                    <div class="text-sm font-bold text-white">Email Marketing</div>
+                    <span class="text-[10px] text-purple-400 font-semibold bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">Marketing</span>
+                </div>
+
+                <!-- Tools & Software -->
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-orange-400">
+                    <i class="fa-solid fa-chart-line text-3xl text-orange-400"></i>
+                    <div class="text-sm font-bold text-white">SEMrush</div>
+                    <span class="text-[10px] text-orange-400 font-semibold bg-orange-500/10 px-2.5 py-0.5 rounded-full border border-orange-500/20">SEO Tool</span>
+                </div>
+
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-indigo-400">
+                    <i class="fa-solid fa-shield-halved text-3xl text-indigo-400"></i>
+                    <div class="text-sm font-bold text-white">Ahrefs</div>
+                    <span class="text-[10px] text-indigo-400 font-semibold bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">SEO Tool</span>
+                </div>
+
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-amber-500">
+                    <i class="fa-chart-pie text-3xl text-amber-500 fa-solid"></i>
+                    <div class="text-sm font-bold text-white">Google Analytics</div>
+                    <span class="text-[10px] text-amber-400 font-semibold bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">Analytics</span>
+                </div>
+
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-sky-400">
+                    <i class="fa-solid fa-tag text-3xl text-sky-400"></i>
+                    <div class="text-sm font-bold text-white">Tag Manager</div>
+                    <span class="text-[10px] text-sky-400 font-semibold bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20">Analytics</span>
+                </div>
+
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-pink-400">
+                    <i class="fa-solid fa-brain text-3xl text-pink-400"></i>
+                    <div class="text-sm font-bold text-white">AI Tools (Gemini/Ideogram)</div>
+                    <span class="text-[10px] text-pink-400 font-semibold bg-pink-500/10 px-2.5 py-0.5 rounded-full border border-pink-500/20">AI Tech</span>
+                </div>
+
+                <div class="skill-card tools glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-teal-400">
+                    <i class="fa-solid fa-envelope-open-text text-3xl text-teal-400"></i>
+                    <div class="text-sm font-bold text-white">Brevo Email</div>
+                    <span class="text-[10px] text-teal-400 font-semibold bg-teal-500/10 px-2.5 py-0.5 rounded-full border border-teal-500/20">Automation</span>
+                </div>
+
+                <!-- Web & Design Tech -->
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-blue-400">
+                    <i class="fa-brands fa-wordpress text-3xl text-blue-400"></i>
+                    <div class="text-sm font-bold text-white">WordPress</div>
+                    <span class="text-[10px] text-blue-400 font-semibold bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">CMS</span>
+                </div>
+
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-cyan-400">
+                    <i class="fa-solid fa-palette text-3xl text-cyan-400"></i>
+                    <div class="text-sm font-bold text-white">Canva Pro</div>
+                    <span class="text-[10px] text-cyan-400 font-semibold bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">Design</span>
+                </div>
+
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-indigo-500">
+                    <i class="fa-solid fa-image text-3xl text-indigo-400"></i>
+                    <div class="text-sm font-bold text-white">Adobe Photoshop</div>
+                    <span class="text-[10px] text-indigo-400 font-semibold bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">Design</span>
+                </div>
+
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-amber-500">
+                    <i class="fa-solid fa-pen-nib text-3xl text-amber-500"></i>
+                    <div class="text-sm font-bold text-white">Adobe Illustrator</div>
+                    <span class="text-[10px] text-amber-400 font-semibold bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">Design</span>
+                </div>
+
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-orange-500">
+                    <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+                    <div class="text-sm font-bold text-white">HTML5 & CSS3</div>
+                    <span class="text-[10px] text-orange-400 font-semibold bg-orange-500/10 px-2.5 py-0.5 rounded-full border border-orange-500/20">Web Tech</span>
+                </div>
+
+                <div class="skill-card design glass-card p-4 rounded-xl text-center space-y-2 hover:scale-105 transition-all border-l-2 border-l-purple-500">
+                    <i class="fa-brands fa-bootstrap text-3xl text-purple-500"></i>
+                    <div class="text-sm font-bold text-white">Bootstrap & Hosting</div>
+                    <span class="text-[10px] text-purple-400 font-semibold bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/20">Web Tech</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-darkbg-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 inline-block px-4 py-1.5 rounded-full border border-brand-500/20">Career Milestones</h2>
+                <p class="text-3xl sm:text-4xl font-black font-display text-white">Professional Work Timeline</p>
+            </div>
+
+            <div class="relative border-l-2 border-gradient-to-b from-brand-500 via-brand-purple to-emerald-400 max-w-4xl mx-auto ml-4 sm:ml-auto space-y-12">
+
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-gradient-to-r from-brand-500 to-cyan-400 border-4 border-darkbg-900 flex items-center justify-center text-white text-xs group-hover:scale-125 transition-transform shadow-lg shadow-brand-500/50">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-brand-500/60 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="px-3.5 py-1.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30 text-xs font-extrabold shadow-sm">Sept 2025 - Present</span>
+                                <h3 class="text-xl font-extrabold text-white font-display mt-2">Digital Marketing Specialist</h3>
+                                <p class="text-brand-accent font-semibold text-sm">Automax Solutions Private Limited (AUTOBSE) | Palarivattom, Kochi</p>
+                            </div>
+                            <span class="text-xs text-amber-400 italic font-medium bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Vehicle Auction Industry</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                            Leading comprehensive search optimization, creative promotional designs and social media channels for AUTOBSE, one of India's leading vehicle auction platforms operating across both online and offline markets.
+                        </p>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Spearheaded comprehensive, full-funnel search engine optimization strategies—spanning On-Page, Off-Page and Technical SEO—to dramatically enhance organic search visibility, drive qualified traffic and establish AUTOBSE as an authoritative digital presence within the competitive vehicle auction industry.</li>
+                            <li>Conducted rigorous, deep-dive site audits and established meticulous tracking systems for keyword rankings and monthly conversions, translating complex data analytics into actionable insights that continuously optimized website performance and user experience.</li>
+                            <li>Conceptualized and designed visually striking, high-converting posters, digital banners and engaging video collateral tailored specifically for high-stakes vehicle auction announcements, ensuring a cohesive and professional brand image across all promotional touchpoints.</li>
+                            <li>Orchestrated the end-to-end management of all active social media channels—including Instagram, Facebook, YouTube and LinkedIn—by developing targeted content calendars, fostering community engagement and tracking audience analytics to maximize reach and engagement.</li>
+                            <li>Pioneered the integration of advanced AI-powered tools to accelerate rapid visual asset creation and streamline automated copywriting workflows, significantly boosting operational efficiency, content output and campaign agility.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 border-4 border-darkbg-900 flex items-center justify-center text-white text-xs group-hover:scale-125 transition-transform shadow-lg shadow-purple-500/50">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-purple-500/60 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-extrabold shadow-sm">April 2023 - May 2025</span>
+                                <h3 class="text-xl font-extrabold text-white font-display mt-2">Digital Marketing Analyst</h3>
+                                <p class="text-purple-400 font-semibold text-sm">Panashi Technology Solutions | Kakkanad, Kochi (Panashi FZCO)</p>
+                            </div>
+                            <span class="text-xs text-purple-300 italic font-medium bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">Self-Service Kiosk Machine Provider</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                            Spearheaded international B2B digital marketing and advanced SEO operations for a premier Dubai-based self-service kiosk manufacturer, strategically targeting enterprise-level clients across diverse Middle Eastern and African markets.
+                        </p>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Engineered robust data tracking infrastructure by meticulously configuring Google Analytics and Google Tag Manager to capture granular user interaction events, monitor complex conversion funnels, and accurately attribute high-value B2B lead pipelines.</li>
+                            <li>Executed aggressive, high-impact Off-Page SEO strategies, conducting authoritative backlink outreach and technical optimizations to dramatically elevate domain authority and organic search visibility within competitive international markets.</li>
+                            <li>Leveraged cutting-edge AI-powered tools for high-end image generation while authoring specialized, thought-leadership LinkedIn articles designed to engage C-suite decision-makers and drive meaningful executive outreach.</li>
+                            <li>Designed and executed targeted, automated B2B email marketing campaigns that successfully nurtured prospective leads, expanded regional distributor networks, and accelerated partnership growth across the Middle East.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 border-4 border-darkbg-900 flex items-center justify-center text-white text-xs group-hover:scale-125 transition-transform shadow-lg shadow-emerald-500/50">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/60 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-extrabold shadow-sm">Sept 2022 - March 2023</span>
+                                <h3 class="text-xl font-extrabold text-white font-display mt-2">Digital Marketing Executive</h3>
+                                <p class="text-emerald-400 font-semibold text-sm">Technorays Digital Media Pvt. Ltd. | Kaloor, Kochi</p>
+                            </div>
+                            <span class="text-xs text-emerald-300 italic font-medium bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Digital Marketing Agency</span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Strategic optimization and ranking campaigns for a diverse portfolio of client websites spanning competitive B2B and B2C niches across Dubai and the broader UAE market, consistently improving organic search visibility and digital footprint.</li>
+                            <li>Executed systematic, high-retention Off-Page link-building initiatives alongside comprehensive, deep-dive site audits to identify technical bottlenecks, correct structural errors and maximize site health.</li>
+                            <li>Collaborated closely with cross-functional teams of web developers and graphic designers to ensure client web properties adhered strictly to modern SEO best practices while maintaining high visual appeal and optimal user experience.</li>
+                            <li> Orchestrated multi-channel digital strategies that bridged technical optimization with creative design, ensuring that client campaigns achieved maximum synergy between search engine performance and audience engagement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 border-4 border-darkbg-900 flex items-center justify-center text-white text-xs group-hover:scale-125 transition-transform shadow-lg shadow-amber-500/50">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-amber-500/60 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div>
+                                <span class="px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-extrabold shadow-sm">June 2019 - June 2020</span>
+                                <h3 class="text-xl font-extrabold text-white font-display mt-2">Junior Sales Associate</h3>
+                                <p class="text-amber-400 font-semibold text-sm">KG Information System Private Limited (KGISL) | Coimbatore</p>
+                            </div>
+                            <span class="text-xs text-amber-300 italic font-medium bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Naaptol Online Shopping Company</span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Managed and navigated complex CRM systems to track customer interactions, update pipelines and streamline the end-to-end sales lifecycle for the Naaptol campaign.</li>
+                            <li>Conducted engaging, high-volume customer sales conversations to understand client needs, pitch relevant products and deliver personalized recommendations</li>
+                            <li>Implemented strategic upselling and cross-selling techniques during active calls to maximize average order value and enhance customer lifetime value.</li>
+                             <li>Analyzed conversion metrics and refined sales pitches in real-time, consistently meeting or exceeding daily performance targets and key performance indicators.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Success / Ongoing Keyword Ranking Section -->
+    <section id="seo-rankings" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold mb-3 shadow-inner">
+                        <i class="fa-solid fa-trophy text-amber-400"></i> Verified Track Record
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black font-display text-white">SEO Keyword Ranking Results</h2>
+                    <p class="text-slate-300 text-sm mt-1">Live organic search engine rankings achieved for client & company websites.</p>
+                </div>
+
+                <!-- Domain Filter Controls -->
+                <div class="flex items-center gap-2">
+                    <button id="filter-all-ranks" class="rank-btn active px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-brand-600 to-brand-purple text-white shadow-lg shadow-brand-500/25">All Keywords</button>
+                    <button id="filter-autobse" class="rank-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:bg-slate-700 border border-slate-700">www.autobse.com</button>
+                    <button id="filter-panashi" class="rank-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:bg-slate-700 border border-slate-700">www.panashi.ae</button>
+                </div>
+            </div>
+
+            <!-- Ranking Highlight Metrics -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-400 flex items-center justify-between hover:scale-102 transition-transform">
+                    <div>
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Top Rank Achieved</p>
+                        <p class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 font-display mt-1">Rank 1</p>
+                        <p class="text-xs text-emerald-400 font-semibold mt-1">"HR Kiosk" for panashi.ae</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white text-xl shadow-lg shadow-emerald-500/30">
+                        <i class="fa-solid fa-crown text-amber-300"></i>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-400 flex items-center justify-between hover:scale-102 transition-transform">
+                    <div>
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">High Intent Keyword</p>
+                        <p class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-200 font-display mt-1">Rank 3</p>
+                        <p class="text-xs text-brand-400 font-semibold mt-1">"Vehicle auctions India"</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-500 to-cyan-400 flex items-center justify-center text-white text-xl shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-purple-400 flex items-center justify-between hover:scale-102 transition-transform">
+                    <div>
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Page-1 SERP Ratio</p>
+                        <p class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-200 font-display mt-1">100%</p>
+                        <p class="text-xs text-purple-400 font-semibold mt-1">All tracked terms in Top 10</p>
+                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-500/30">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Ranking Data Table -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-slate-200 text-xs font-black uppercase tracking-wider border-b border-slate-700/80">
+                                <th class="p-4 sm:p-5">Website Domain</th>
+                                <th class="p-4 sm:p-5">Target Keyword</th>
+                                <th class="p-4 sm:p-5 text-center">Google SERP Rank</th>
+                                <th class="p-4 sm:p-5 text-right">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 text-sm" id="ranking-table-body">
+                            
+                            <!-- autobse rows -->
+                            <tr class="rank-row domain-autobse hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-brand-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-brand-400"></i> www.autobse.com
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Vehicle auctions India</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 3
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Top 3 Result</td>
+                            </tr>
+
+                            <tr class="rank-row domain-autobse hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-brand-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-brand-400"></i> www.autobse.com
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Online vehicle auctions</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 7
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Page 1</td>
+                            </tr>
+
+                            <tr class="rank-row domain-autobse hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-brand-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-brand-400"></i> www.autobse.com
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Commercial vehicle auction</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 9
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Page 1</td>
+                            </tr>
+
+                            <tr class="rank-row domain-autobse hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-brand-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-brand-400"></i> www.autobse.com
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Vehicle auction by bank</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 7
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Page 1</td>
+                            </tr>
+
+                            <tr class="rank-row domain-autobse hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-brand-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-brand-400"></i> www.autobse.com
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Vehicle auctions delhi</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 6
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Page 1</td>
+                            </tr>
+
+                            <!-- panashi rows -->
+                            <tr class="rank-row domain-panashi hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-cyan-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-cyan-400"></i> www.panashi.ae
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">HR Kiosk</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-300 font-extrabold text-xs shadow-sm">
+                                        <i class="fa-solid fa-crown text-[10px] text-amber-300"></i> Rank 1
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Featured 1 Position</td>
+                            </tr>
+
+                            <tr class="rank-row domain-panashi hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-cyan-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-cyan-400"></i> www.panashi.ae
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Charity Kiosk</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 2
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Top 2 Result</td>
+                            </tr>
+
+                            <tr class="rank-row domain-panashi hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-cyan-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-cyan-400"></i> www.panashi.ae
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Kiosk machine</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 4
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Top 5 Result</td>
+                            </tr>
+                            <tr class="rank-row domain-panashi hover:bg-slate-800/60 transition-colors">
+                                <td class="p-4 sm:p-5 font-bold text-cyan-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-globe text-xs text-cyan-400"></i> www.panashi.ae
+                                </td>
+                                <td class="p-4 sm:p-5 text-white font-medium">Selfservice kiosk</td>
+                                <td class="p-4 sm:p-5 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3.5 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 text-brand-400 font-bold text-xs shadow-sm">
+                                        <i class="fa-solid fa-arrow-up text-[10px]"></i> Rank 8
+                                    </span>
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-medium text-slate-300 text-xs">Featured 10 Position</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graphic Design Showcase Section (Interactive Linkable Cards) -->
+    <section id="design-showcase" class="py-20 bg-darkbg-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl sm:text-4xl font-black font-display text-white">Graphic Design Showcase</h2>
+                <div class="text-brand-400 text-3xl animate-pulse"><i class="fa-solid fa-arrow-right-long"></i></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left Column: Poster Designs (16 items grid wrapped in <a> tags) -->
+                <div class="lg:col-span-8 glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="bg-gradient-to-r from-brand-600 via-purple-600 to-brand-accent py-3 px-4 rounded-xl text-center mb-6 shadow-lg">
+                        <h3 class="text-sm font-black uppercase tracking-widest text-white">POSTER DESIGNS</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <!-- Poster Sample 1 -->
+                        <a href="https://i.postimg.cc/cC3YLh1V/online-auction-2026-11-05T175103-081.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/cC3YLh1V/online-auction-2026-11-05T175103-081.jpg" alt="Poster Sample 1" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 2 -->
+                        <a href="https://i.postimg.cc/yxy5tm4q/Happy-Onam-(1600-x-1600-px).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/yxy5tm4q/Happy-Onam-(1600-x-1600-px).jpg" alt="Poster Sample 2" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 3 -->
+                        <a href="https://i.postimg.cc/Wbt6QmP4/Autobse-whatsapp-(1).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/Wbt6QmP4/Autobse-whatsapp-(1).jpg" alt="Poster Sample 3" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 4 -->
+                        <a href="https://i.postimg.cc/gj7RY5Pn/Happy-Birthday-(Instagram-Post-(45))-(3).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/gj7RY5Pn/Happy-Birthday-(Instagram-Post-(45))-(3).jpg" alt="Poster Sample 4" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 5 -->
+                        <a href="https://i.postimg.cc/QCF9nbKv/Work-anniversary-(1).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/QCF9nbKv/Work-anniversary-(1).jpg" alt="Poster Sample 5" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 6 -->
+                        <a href="https://i.postimg.cc/RF64kbXr/Durga-Puja-(2).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/RF64kbXr/Durga-Puja-(2).jpg" alt="Poster Sample 6" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 7 -->
+                        <a href="https://i.postimg.cc/Df4wHmMG/online-auction-2026-11-05T181007-211.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/Df4wHmMG/online-auction-2026-11-05T181007-211.jpg" alt="Poster Sample 7" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 8 -->
+                        <a href="https://i.postimg.cc/G3FWQVP4/online-auction-2026-11-05T180236-416.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/G3FWQVP4/online-auction-2026-11-05T180236-416.jpg" alt="Poster Sample 8" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 9 -->
+                        <a href="https://i.postimg.cc/RFRT37fr/Hiring-(21).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/RFRT37fr/Hiring-(21).jpg" alt="Poster Sample 9" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 10 -->
+                        <a href="https://i.postimg.cc/RqrFpzBy/Welcome-Poster-(14).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/RqrFpzBy/Welcome-Poster-(14).jpg" alt="Poster Sample 10" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 11 -->
+                        <a href="https://i.postimg.cc/fLxgScbn/Independence-Day-(1).jpg " target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/fLxgScbn/Independence-Day-(1).jpg" alt="Poster Sample 11" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 12 -->
+                        <a href="https://i.postimg.cc/HLLyydsc/Online-Auction-2026-11-05T172050-423.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/HLLyydsc/Online-Auction-2026-11-05T172050-423.jpg" alt="Poster Sample 12" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 13 -->
+                        <a href="https://i.postimg.cc/nVmQ7dZ2/Online-auction-2026-11-05T174253-680.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/nVmQ7dZ2/Online-auction-2026-11-05T174253-680.jpg" alt="Poster Sample 13" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 14 -->
+                        <a href="https://i.postimg.cc/bNTrHW5r/Welcome-poster-Arathi.png" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/bNTrHW5r/Welcome-poster-Arathi.png" alt="Poster Sample 14" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 15 -->
+                        <a href="https://i.postimg.cc/7YW8kNGm/Online-auction-2026-11-05T172746-174.jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/7YW8kNGm/Online-auction-2026-11-05T172746-174.jpg" alt="Poster Sample 15" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+
+                        <!-- Poster Sample 16 -->
+                        <a href="https://i.postimg.cc/Dz1t1kjy/Maha-Navami-(2).jpg" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-brand-500 transition-all cursor-pointer group block shadow-md hover:shadow-brand-500/20">
+                            <img src="https://i.postimg.cc/Dz1t1kjy/Maha-Navami-(2).jpg" alt="Poster Sample 16" class="w-full h-24 object-cover rounded-lg mb-2 group-hover:scale-105 transition-transform duration-300">
+                            <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-brand-400 transition-colors">Click to view image</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Video Content (Featured large video + grid wrapped in <a> tags) -->
+                <div class="lg:col-span-4 glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 py-3 px-4 rounded-xl text-center mb-6 shadow-lg">
+                        <h3 class="text-sm font-black uppercase tracking-widest text-white">VIDEO CONTENT</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Featured Top Large Video Card -->
+                        <a href="https://youtube.com/shorts/RDcge0oYJbc?si=XjoGtuf6ri_V_bJE" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-3 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                            <div class="relative w-full h-32 rounded-lg overflow-hidden mb-2">
+                                <img src="https://img.youtube.com/vi/RDcge0oYJbc/hqdefault.jpg" alt="Featured Video Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                    <div class="w-10 h-10 rounded-full bg-red-600/90 text-white flex items-center justify-center text-sm shadow-lg group-hover:scale-110 transition-transform">
+                                        <i class="fa-solid fa-play ml-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-300 font-semibold group-hover:text-red-400 transition-colors">Click to view full video</p>
+                        </a>
+
+                        <!-- Smaller Grid Videos -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://youtube.com/shorts/TUo2VNACEno?si=Nh0p2U3O7483x4W7" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-2.5 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                                <div class="relative w-full h-20 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://img.youtube.com/vi/TUo2VNACEno/hqdefault.jpg" alt="Video Short 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <div class="w-7 h-7 rounded-full bg-red-600/90 text-white flex items-center justify-center text-xs shadow-md">
+                                            <i class="fa-solid fa-play ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-red-400 transition-colors">Click to view full video</p>
+                            </a>
+
+                            <a href="https://youtube.com/shorts/HkMTvnKFjMs?si=yl8T_uiuF5tKFXmz" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-2.5 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                                <div class="relative w-full h-20 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://img.youtube.com/vi/HkMTvnKFjMs/hqdefault.jpg" alt="Video Short 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <div class="w-7 h-7 rounded-full bg-red-600/90 text-white flex items-center justify-center text-xs shadow-md">
+                                            <i class="fa-solid fa-play ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-red-400 transition-colors">Click to view full video</p>
+                            </a>
+
+                            <a href="https://youtube.com/shorts/oFFgYeHWfxs?si=tCq6Y_dl3YDcG3Gz" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-2.5 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                                <div class="relative w-full h-20 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://img.youtube.com/vi/oFFgYeHWfxs/hqdefault.jpg" alt="Video Short 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <div class="w-7 h-7 rounded-full bg-red-600/90 text-white flex items-center justify-center text-xs shadow-md">
+                                            <i class="fa-solid fa-play ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-red-400 transition-colors">Click to view full video</p>
+                            </a>
+
+                            <a href="https://youtube.com/shorts/j9ROJF7RipY?si=L4WTG79AYn7PKelT" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-2.5 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                                <div class="relative w-full h-20 rounded-lg overflow-hidden mb-1.5">
+                                    <img src="https://img.youtube.com/vi/j9ROJF7RipY/hqdefault.jpg" alt="Video Short 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <div class="w-7 h-7 rounded-full bg-red-600/90 text-white flex items-center justify-center text-xs shadow-md">
+                                            <i class="fa-solid fa-play ml-0.5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[11px] text-slate-300 font-semibold leading-tight group-hover:text-red-400 transition-colors">Click to view full video</p>
+                            </a>
+                        </div>
+
+                        <!-- Bottom Video Card -->
+                        <a href="https://youtube.com/shorts/NpfgEi9JmBU?si=bR1U11N07sosqOu6" target="_blank" rel="noopener noreferrer" class="bg-slate-900/80 p-2.5 rounded-xl text-center border border-slate-700/60 hover:border-red-500 transition-all cursor-pointer group block shadow-md">
+                            <div class="relative w-full h-24 rounded-lg overflow-hidden mb-1.5">
+                                <img src="https://img.youtube.com/vi/NpfgEi9JmBU/hqdefault.jpg" alt="Video Short 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                    <div class="w-8 h-8 rounded-full bg-red-600/90 text-white flex items-center justify-center text-xs shadow-md">
+                                        <i class="fa-solid fa-play ml-0.5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-slate-300 font-semibold group-hover:text-red-400 transition-colors">Click to view full video</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-darkbg-800/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 inline-block px-4 py-1.5 rounded-full border border-brand-500/20">Academic Background</h2>
+                <p class="text-3xl sm:text-4xl font-black font-display text-white">Education & Qualifications</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Master's Degree -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-brand-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-brand-500/10 transition-colors">M.Sc</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30 text-xs font-extrabold shadow-sm">2020 - 2022</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">MSc Computer Science</h3>
+                    <p class="text-brand-accent font-bold text-sm mt-1">Grade: 80% </p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">AJK EDUCATIONAL INSTITUTIONS - COIMBATORE</p>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-purple-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-purple-500/10 transition-colors">BCA</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-extrabold shadow-sm">2016 - 2019</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">BCA (Bachelor of Computer Application)</h3>
+                    <p class="text-purple-400 font-bold text-sm mt-1">Grade: 70% </p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">AL JAMIA ARTS & SCIENCE COLLEGE - PERINTHALMANNA</p>
+                </div>
+                
+                <!-- Diploma -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-emerald-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-emerald-500/10 transition-colors">Diploma</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-extrabold shadow-sm">2021 - 2022</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">Diploma in Hardware and Networking</h3>
+                    <p class="text-emerald-400 font-bold text-sm mt-1">Grade: 80% </p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">NATIONAL COUNCIL OF VOCATIONAL AND RESEARCH TRAINING (NCVRT- AJK)</p>
+                </div>
+
+                <!-- Higher Secondary -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-cyan-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-cyan-500/10 transition-colors">HSC</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-extrabold shadow-sm">2014 - 2016</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">Higher Secondary - Science</h3>
+                    <p class="text-cyan-400 font-bold text-sm mt-1">Grade: 80%</p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">KALLADI HIGHER SECONDARY SCHOOL - KUMARAMPUTHUR</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-amber-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-amber-500/10 transition-colors">HSC</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-extrabold shadow-sm">2011 - 2014</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">High School</h3>
+                    <p class="text-amber-400 font-bold text-sm mt-1">Grade: 80%</p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">KALLADI HIGHER SECONDARY SCHOOL - KUMARAMPUTHUR</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative overflow-hidden group hover:border-rose-500/60 transition-all hover:-translate-y-1">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800/25 text-8xl font-black font-display pointer-events-none group-hover:text-rose-500/10 transition-colors">HSC</div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-extrabold shadow-sm">2003 - 2011</span>
+                    <h3 class="text-xl font-extrabold text-white font-display mt-4">Primary</h3>
+                    <p class="text-rose-400 font-bold text-sm mt-1">Grade: 90%</p>
+                    <p class="text-slate-300 text-sm mt-3 font-medium">GALAXY ENGLISH SCHOOL - ALANALLUR</p>
+                </div>
+
+            </div>
+
+            <!-- Passport & Personal Info Bar -->
+            <div class="mt-12 glass-card p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 text-xs sm:text-sm">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 flex items-center justify-center text-slate-950 text-xl font-bold shadow-lg shadow-amber-500/30">
+                        <i class="fa-solid fa-passport"></i>
+                    </div>
+                    <div>
+                        <p class="text-amber-300 font-black tracking-wide text-sm">VALID INDIAN PASSPORT HOLDER</p>
+                        <p class="text-white font-extrabold text-sm mt-0.5">Passport Number : Z5940018</p>
+                        <p class="text-slate-300 font-normal">Ready for domestic and international relocation / travel</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-slate-300 font-medium">
+                    <div><span class="text-slate-400 font-bold">Languages:</span> English, Malayalam, Hindi</div>
+                    <div><span class="text-slate-400 font-bold">Location:</span> Kerala, India</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative glow-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 inline-block px-4 py-1.5 rounded-full border border-brand-500/20">Get In Touch</h2>
+                <p class="text-3xl sm:text-4xl font-black font-display text-white">Let's Discuss Growth Strategies</p>
+                <p class="text-slate-300 text-sm">Have a marketing opportunity, project or full-time position? Send me a message below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                
+                <!-- Contact Direct Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-6">
+                        <h3 class="text-xl font-extrabold text-white font-display">Contact Details</h3>
+                        
+                        <a href="tel:+918848219997" class="flex items-start gap-4 p-3.5 rounded-xl hover:bg-slate-800/80 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white text-lg shrink-0 shadow-md">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Phone / WhatsApp</p>
+                                <p class="text-white font-extrabold text-sm mt-0.5">+91 8848 21 9997</p>
+                                <p class="text-slate-300 text-xs">+91 9947 24 0576</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:puthenkodeamjadpt@gmail.com" class="flex items-start gap-4 p-3.5 rounded-xl hover:bg-slate-800/80 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center text-white text-lg shrink-0 shadow-md">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Email Address</p>
+                                <p class="text-white font-extrabold text-sm break-all mt-0.5">puthenkodeamjadpt@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="http://www.amjadpmna.online" target="_blank" class="flex items-start gap-4 p-3.5 rounded-xl hover:bg-slate-800/80 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-teal-400 flex items-center justify-center text-white text-lg shrink-0 shadow-md">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Personal Website</p>
+                                <p class="text-white font-extrabold text-sm mt-0.5">www.amjadpmna.online</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-start gap-4 p-3.5 rounded-xl border border-transparent">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white text-lg shrink-0 shadow-md">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Address</p>
+                                <p class="text-white font-extrabold text-sm mt-0.5">Puthenkottu Thodekattil (H)</p>
+                                <p class="text-slate-300 text-xs">Vettathur P.O, Perinthalmanna, Malappuram, Kerala - 679326</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" class="glass-card p-8 rounded-2xl border border-slate-800 space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-black text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-black text-slate-300 uppercase tracking-wider mb-2">Your Email</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-black text-slate-300 uppercase tracking-wider mb-2">Subject</label>
+                            <input type="text" required placeholder="Marketing Inquiry / Job Opportunity" class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-black text-slate-300 uppercase tracking-wider mb-2">Message</label>
+                            <textarea rows="4" required placeholder="Write your message here..." class="w-full px-4 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 via-brand-purple to-brand-accent text-white font-extrabold text-center shadow-lg shadow-brand-500/25 hover:shadow-brand-500/50 hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider">
+                            Send Message <i class="fa-solid fa-paper-plane ml-2 text-sm"></i>
+                        </button>
+
+                        <!-- Notification Box -->
+                        <div id="form-status" class="hidden p-4 rounded-xl text-center text-xs font-bold"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800/80 bg-darkbg-900 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 font-medium">
+            <div>
+                © <span id="current-year"></span> <span class="text-white font-bold">Amjad P T</span>. All rights reserved.
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#hero" class="hover:text-brand-400 transition-colors font-semibold">Back to top <i class="fa-solid fa-arrow-up ml-1 text-brand-400"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Skills Filter Logic
+        const skillTabs = document.querySelectorAll('.skill-tab');
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                skillTabs.forEach(t => {
+                    t.classList.remove('bg-gradient-to-r', 'from-brand-600', 'to-brand-purple', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+                    t.classList.add('bg-slate-800/90', 'text-slate-300');
+                });
+                tab.classList.remove('bg-slate-800/90', 'text-slate-300');
+                tab.classList.add('bg-gradient-to-r', 'from-brand-600', 'to-brand-purple', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+
+                const filter = tab.getAttribute('data-filter');
+
+                skillCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // SEO Ranking Table Filter
+        const rankBtns = document.querySelectorAll('.rank-btn');
+        const rankRows = document.querySelectorAll('.rank-row');
+
+        document.getElementById('filter-all-ranks').addEventListener('click', function() {
+            setActiveRankBtn(this);
+            rankRows.forEach(row => row.style.display = '');
+        });
+
+        document.getElementById('filter-autobse').addEventListener('click', function() {
+            setActiveRankBtn(this);
+            rankRows.forEach(row => {
+                if(row.classList.contains('domain-autobse')) row.style.display = '';
+                else row.style.display = 'none';
+            });
+        });
+
+        document.getElementById('filter-panashi').addEventListener('click', function() {
+            setActiveRankBtn(this);
+            rankRows.forEach(row => {
+                if(row.classList.contains('domain-panashi')) row.style.display = '';
+                else row.style.display = 'none';
+            });
+        });
+
+        function setActiveRankBtn(selectedBtn) {
+            rankBtns.forEach(btn => {
+                btn.classList.remove('bg-gradient-to-r', 'from-brand-600', 'to-brand-purple', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+                btn.classList.add('bg-slate-800/90', 'text-slate-300');
+            });
+            selectedBtn.classList.remove('bg-slate-800/90', 'text-slate-300');
+            selectedBtn.classList.add('bg-gradient-to-r', 'from-brand-600', 'to-brand-purple', 'text-white', 'shadow-lg', 'shadow-brand-500/25');
+        }
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show temporary success feedback
+            formStatus.classList.remove('hidden', 'bg-red-500/20', 'text-red-400');
+            formStatus.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border', 'border-emerald-500/30');
+            formStatus.textContent = 'Thank you! Your message has been sent successfully. Amjad will get back to you shortly.';
+            
+            contactForm.reset();
+
+            setTimeout(() => {
+                formStatus.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
